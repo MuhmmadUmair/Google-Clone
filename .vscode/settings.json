@@ -1,0 +1,25 @@
+{
+    "[dart]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnType": false,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "dart.lineLength": 80,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "never",
+        "source.organizeImports": "never"
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "dart.previewTrailingCommas": true,
+    "dart.trailingCommas": "all",
+    "dart.enableSdkFormatter": true,
+    "dart.useSdkFormatter": true
+}
