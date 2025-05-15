@@ -5,7 +5,7 @@ import 'package:google_clone/config/api_keys.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  bool isDummyData = true;
+  bool isDummyData = false;
 
   Future<Map<String, dynamic>> fetchData({
     required String queryTerm,
@@ -20,7 +20,7 @@ class ApiService {
 
         final response = await http.get(
           Uri.parse(
-            'hhtps://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=$contextKey &q=$q&start=$start',
+            'https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=$contextKey&q=$q&start=$start',
           ),
         );
         if(response.statusCode == 200) {

@@ -15,7 +15,8 @@ class SearchButton extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 18, horizontal: 25),
       color: searchColor,
       child: Text(title),
-      onPressed: () {},
+      onPressed: () {
+      },
     );
   }
 }

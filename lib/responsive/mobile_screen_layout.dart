@@ -3,8 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_clone/colors.dart';
 import 'package:google_clone/widgets/mobile/mobile_footer.dart';
 import 'package:google_clone/widgets/search.dart';
-import 'package:google_clone/widgets/translation_button.dart';
-import 'package:google_clone/widgets/web/search_buttons.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({super.key});
@@ -13,6 +11,7 @@ class MobileScreenLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: backgroundColor,
         elevation: 0,
@@ -56,29 +55,26 @@ class MobileScreenLayout extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(left: 5, right: 5),
-        child: Column(
-          children: [
-            SizedBox(height: size.height * 0.25),
-            Expanded(
-              child: Column(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 5, right: 5,),
+          child: Column(
+            children: [
+              SizedBox(height: size.height * 0.25),
+              Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: const [
                       Search(),
                       SizedBox(height: 20),
-                      SearchButtons(),
-                      SizedBox(height: 20),
-                      TranslationButton(),
                     ],
                   ),
                   const MobileFooter(),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
